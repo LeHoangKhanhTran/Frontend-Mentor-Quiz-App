@@ -10,9 +10,9 @@ export default function Question({questionId, questionCount, setQuestionCount, l
     const score = useRef(0);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [error, setError] = useState(false)
-    const [question] = useFetch({path: 'questions', param: questionId})
+    const {data} = useFetch({path: 'questions', param: questionId})
     useEffect(() => {
-        if (question && choice === question.answer) {
+        if (data && choice === data.answer) {
             score.current = score.current + 1;
         }
     }, [isSubmitted])
@@ -58,19 +58,19 @@ export default function Question({questionId, questionCount, setQuestionCount, l
         }
     }, [isSubmitted, questionCount])
     return (
-    question && <>
+    data && <>
             <FirstSection progress={progress}> 
                     <p className="text">Question {questionCount} of {length}</p>
-                        <h3 className="question">{question.question}</h3>
+                        <h3 className="question">{data.question}</h3>
                     <div className="progress-bar">
                         <span></span>
                     </div>
                 </FirstSection>
                  <SecondSection>
-                    {question.options.map((option, i) => {
+                    {data.options.map((option, i) => {
                         return (
                             <OptionItem index={i} choice={option} isChosen={!isSubmitted && choice === option} 
-                            isCorrect={!isSubmitted ? null : option === question.answer ? true : false} 
+                            isCorrect={!isSubmitted ? null : option === data.answer ? true : false} 
                             setChoice={setChoice}/>
                         )
                     })}

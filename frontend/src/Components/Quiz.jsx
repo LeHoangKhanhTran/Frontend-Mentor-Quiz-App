@@ -4,17 +4,19 @@ import { useParams } from "react-router-dom";
 import { useState, useMemo } from "react";
 import useFetch from "../hooks/useFetch";
 import Question from "./Question";
+import Spinner from "./Spinner";
 export default function Quiz() {
     const { topicName } = useParams();
     const [questionCount, setQuestionCount] = useState(1);
-    const [topicData] = useFetch({path: 'topics', param: topicName});
+    const {data, loading} = useFetch({path: 'topics', param: topicName});
     const questionsIds = useMemo(() => {
-        return topicData ? topicData[0].questionsIds : [];
-    }, [topicData])
+        return data ? data[0].questionsIds : [];
+    }, [data])
     return (
         <>
             <Header topic={topicName.toLowerCase()}/>
-            {questionsIds[questionCount - 1] && <Content>
+            {loading && <Spinner/>}
+            {questionsIds[questionCount - 1] && !loading && <Content>
                 <Question questionId={questionsIds[questionCount - 1]} questionCount={questionCount} 
                 setQuestionCount={setQuestionCount} length={questionsIds.length} topicName={topicName} />
             </Content>}

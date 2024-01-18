@@ -7,7 +7,8 @@ export const lightTheme = {
         itemBgColor: "var(--primary-color-light)",
         progressBarColor: "var(--background-light)",
         imgHolderBg: "var(--background-light)",
-        actionColor: "var(--primary-action-color)"
+        actionColor: "var(--primary-action-color)",
+        spinnerBg: "var(--background-light)"
 }
 export const darkTheme = {
         name: "dark",
@@ -18,5 +19,6 @@ export const darkTheme = {
         itemBgColor: "var(--secondary-color)",
         progressBarColor: "var(--secondary-color)",
         imgHolderBg: "var(--primary-color-light)",
-        actionColor: "var(--primary-action-color)"
+        actionColor: "var(--primary-action-color)",
+        spinnerBg: "var(--primary-color-light)"
 }

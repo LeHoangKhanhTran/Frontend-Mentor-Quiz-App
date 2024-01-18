@@ -1,13 +1,11 @@
 import Header from './Header'
 import Content from './Content';
-import { useRef } from 'react';
+import Spinner from './Spinner';
 import { FirstSection, SecondSection } from './Content/Content.styles';
 import TopicItem from './TopicItem';
 import  useFetch  from '../hooks/useFetch';
 function Home() {
-    
-    
-    const [data] = useFetch({path: "topics"});
+    const {data, loading} = useFetch({path: "topics"});
     return (
         <>
             <Header/>
@@ -19,13 +17,15 @@ function Home() {
                     </h1>
                     <div className="text" id="pick">Pick a subject to get started</div>
                 </FirstSection>
+                {loading && <Spinner/>}
+                {!loading && 
                 <SecondSection>
                     {data && data.map((topic) => {
-            return (
-                <TopicItem value={topic.name}/>
-            )
-        })}
-                </SecondSection>
+                    return (
+                        <TopicItem value={topic.name}/>
+                    )
+                    })}
+                </SecondSection>}
             </Content>
         </>
     )

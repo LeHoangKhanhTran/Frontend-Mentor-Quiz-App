@@ -7,8 +7,8 @@ import cors from 'cors';
 
 import dotenv from 'dotenv';
 dotenv.config();
-const mongoDBUrl = process.env.MONGODB_URL
-const app = express();
+const mongoDBUrl = process.env.MONGODB_URL;
+const app = express(); 
 
 app.use(cors({
     origin: "*",
@@ -36,3 +36,5 @@ mongoose.connect(mongoDBUrl)
 .catch((err) => {
     console.log(err)
 })
+
+export default app;

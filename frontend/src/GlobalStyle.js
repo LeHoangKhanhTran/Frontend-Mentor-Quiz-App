@@ -69,7 +69,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 100%;
         rotate: 45deg;
-        bottom: 39%;
+        bottom: 36.5%;
         right: -9%;
         rotate: 230deg;
         /* width: 100dvh;

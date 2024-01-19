@@ -85,7 +85,7 @@ export const FirstSection = styled.section`
         position: relative;
         width: 100%;
         h1 {
-            font-size: 2.9rem;
+            font-size: 2.7rem;
         }
         
         .text {
@@ -119,13 +119,13 @@ export const SecondSection = styled.section`
     }
 
     .error {
-        position: absolute;
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
         width: 100%;
         color: var(--wrong-color);
-        bottom: -50px;
+        bottom: 15px;
     }
 `

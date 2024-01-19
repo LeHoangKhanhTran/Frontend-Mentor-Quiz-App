@@ -52,10 +52,10 @@ export const ThemeChanger = styled.section`
     }
 
     @media (max-width: 1050px) and (min-width: 600px) {
-        gap: 30px;
+        gap: 25px;
 
         .toggle, #sun-icon, #moon-icon {
-            transform: scale(1.6);
+            transform: scale(1.3);
         }
 
     }
@@ -85,6 +85,10 @@ export const TopicDisplay = styled.section`
     @media (max-width: 1050px) and (min-width: 600px) {
         .img-holder > img {
             transform: scale(1.6);
+        }
+
+        .topic-name {
+            font-size: 1.2rem;
         }
     }
 

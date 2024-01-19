@@ -19,6 +19,7 @@ export const Wrapper = styled.header`
 
     @media (max-width: 500px) {
         width: 90%;
+        height: 18dvh;
     }
 `
 export const ThemeChanger = styled.section`

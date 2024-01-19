@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
 
     #root {
         width: 100dvw;
-        height: 100dvh;  
+        height: fit-content;  
         overflow-y: auto;
     }
 

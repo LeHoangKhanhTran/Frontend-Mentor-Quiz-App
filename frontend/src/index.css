@@ -38,7 +38,7 @@ h1, div, span {
 }
 
 :root {
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 a {

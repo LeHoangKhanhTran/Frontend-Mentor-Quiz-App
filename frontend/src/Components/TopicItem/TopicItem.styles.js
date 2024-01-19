@@ -9,7 +9,7 @@ export const Wrapper = styled.li`
     padding: 10px;
     background: ${props => props.theme.theme.itemBgColor};
     border-radius: 14px;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
     text-align: center;
     cursor: pointer;

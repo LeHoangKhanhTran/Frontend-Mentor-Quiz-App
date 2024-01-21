@@ -1,8 +1,8 @@
-import Header from './Header'
-import Content from './Content';
-import Spinner from './Spinner';
-import { FirstSection, SecondSection } from './Content/Content.styles';
-import TopicItem from './TopicItem';
+import Header from '../Components/Header'
+import Content from '../Components/Content';
+import Spinner from '../Components/Spinner';
+import { FirstSection, SecondSection } from '../Components/Content/Content.styles';
+import TopicItem from '../Components/TopicItem';
 import  useFetch  from '../hooks/useFetch';
 function Home() {
     const {data, loading} = useFetch({path: "topics"});

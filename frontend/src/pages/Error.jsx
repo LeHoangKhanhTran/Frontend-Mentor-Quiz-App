@@ -1,4 +1,4 @@
-import Header from "./Header"
+import Header from "../Components/Header"
 import styled from "styled-components"
 
 const Container = styled.main`

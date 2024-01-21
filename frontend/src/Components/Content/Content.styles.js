@@ -113,19 +113,24 @@ export const SecondSection = styled.section`
     height: 100%;
     align-items: end;
 
-    @media (max-width: 1200px) {
-        width: 100%;
-        margin-block-end: 50px;
-    }
-
     .error {
-        position: relative;
+        position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
         width: 100%;
         color: var(--wrong-color);
-        bottom: 15px;
+        bottom: -50px;
+    }
+
+    @media (max-width: 1200px) {
+        width: 100%;
+        margin-block-end: 50px;
+
+        .error {
+            position: relative;
+            bottom: 15px;
+        }
     }
 `

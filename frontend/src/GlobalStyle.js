@@ -33,6 +33,7 @@ const GlobalStyle = createGlobalStyle`
 
     #root {
         width: 100dvw;
+        min-height: 100dvh;
         height: fit-content;  
         overflow-y: auto;
     }
@@ -49,14 +50,6 @@ const GlobalStyle = createGlobalStyle`
         rotate: 45deg;
         top: 32%;
         left: -9%;
-        /* width: 100dvh;
-        height: 100dvh;
-        top: -35%;
-        left: -20%;
-        border-radius: 50%;
-        border: 144px solid ${props => props.theme.theme.backgroundImgColor};
-        clip-path: margin-box circle(50% at 25% 25%);
-        rotate: 180deg; */
     }
 
     #root::after {
@@ -72,13 +65,6 @@ const GlobalStyle = createGlobalStyle`
         bottom: 36.5%;
         right: -9%;
         rotate: 230deg;
-        /* width: 100dvh;
-        height: 100dvh;
-        bottom: -32%;
-        right: -20%;
-        border-radius: 50%;
-        border: 144px solid ${props => props.theme.theme.backgroundImgColor};
-        clip-path: margin-box circle(50% at 25% 25%); */
     }
 
     @media (max-width: 1290px) {

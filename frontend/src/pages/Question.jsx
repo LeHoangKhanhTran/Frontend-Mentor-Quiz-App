@@ -1,8 +1,8 @@
-import { FirstSection, SecondSection } from "./Content/Content.styles";
+import { FirstSection, SecondSection } from "../Components/Content/Content.styles";
 import useFetch from "../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
-import OptionItem from "./OptionItem";
-import Button from "./Button";
+import OptionItem from "../Components/OptionItem";
+import Button from "../Components/Button";
 import { useState, useMemo, useCallback, useEffect, useRef} from "react";
 export default function Question({questionId, questionCount, setQuestionCount, length, topicName}) {
     const navigate = useNavigate();

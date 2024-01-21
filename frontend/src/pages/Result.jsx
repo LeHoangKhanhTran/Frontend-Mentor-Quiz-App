@@ -1,7 +1,7 @@
-import Header from "./Header";
-import Content from "./Content";
-import Score from "./Score";
-import { FirstSection, SecondSection } from "./Content/Content.styles"
+import Header from "../Components/Header";
+import Content from "../Components/Content";
+import Score from "../Components/Score";
+import { FirstSection, SecondSection } from "../Components/Content/Content.styles"
 import { useLocation } from "react-router-dom";
 import Error from "./Error";
 export default function Result() {

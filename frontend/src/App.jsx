@@ -1,10 +1,10 @@
 import GlobalStyle from './GlobalStyle.js';
-import Home from './Components/Home.jsx'
+import Home from './pages/Home.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import Quiz from './Components/Quiz.jsx';
-import Result from './Components/Result.jsx';
-import Error from './Components/Error.jsx';
+import Quiz from './pages/Quiz.jsx';
+import Result from './pages/Result.jsx';
+import Error from './pages/Error.jsx';
 import { lightTheme, darkTheme } from './Themes.js';
 import { useState } from 'react';
 

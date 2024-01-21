@@ -1,10 +1,10 @@
-import Header from "./Header";
-import Content from "./Content";
+import Header from "../Components/Header";
+import Content from "../Components/Content";
 import { useParams } from "react-router-dom";
 import { useState, useMemo } from "react";
 import useFetch from "../hooks/useFetch";
 import Question from "./Question";
-import Spinner from "./Spinner";
+import Spinner from "../Components/Spinner";
 export default function Quiz() {
     const { topicName } = useParams();
     const [questionCount, setQuestionCount] = useState(1);

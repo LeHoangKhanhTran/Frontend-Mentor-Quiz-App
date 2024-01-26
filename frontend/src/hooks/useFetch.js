@@ -5,15 +5,18 @@ const useFetch = ({path, param}) => {
     const [loading, setLoading] = useState(false);
     useEffect(() => {
         setLoading(true);
-        fetch(`https://quiz-app-backend-cyan.vercel.app/${path}/${param ? param : ""}`
-        )
-        .then((data) => {
-            return data.json()
-        })
-        .then((data) => {
-            setData(prev => data)
-            setLoading(false)
-        })
+        const fetchUrl = async () => {
+            try {
+                const data = await fetch(`https://quiz-app-backend-cyan.vercel.app/${path}/${param ? param : ""}`);
+                const parsedData = await data.json();
+                setData(prev => parsedData);
+                setLoading(false);
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+        fetchUrl();
     }, [path, param])
     return {data, loading};
 }

@@ -27,15 +27,15 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         background: ${props => props.theme.theme.backgroundColor};
-        /* overflow-x: hidden;
-        overflow-y: auto; */
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     #root {
         width: 100dvw;
         min-height: 100dvh;
         height: fit-content;  
-        /* overflow-y: auto; */
+        overflow-y: auto;
     }
 
     #root::before {

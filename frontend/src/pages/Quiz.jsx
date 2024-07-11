@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { useState, useMemo } from "react";
 import useFetch from "../hooks/useFetch";
 import Question from "./Question";
-import Spinner from "../Components/LoadingSpin";
 import LoadingSpin from "../Components/LoadingSpin";
 export default function Quiz() {
     const { topicName } = useParams();

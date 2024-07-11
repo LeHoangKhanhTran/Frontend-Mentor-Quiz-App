@@ -12,7 +12,7 @@ function App() {
   const [theme, setTheme] = useState(localStorage.getItem('quiz-theme') === 'light' ? lightTheme : darkTheme)
 
   const toggleTheme = () => {
-    setTheme(prev => prev == lightTheme ? prev = darkTheme : prev = lightTheme);
+    setTheme(prev => prev === lightTheme ? prev = darkTheme : prev = lightTheme);
     let themeName = theme.name === 'light' ? 'dark' : 'light'
     localStorage.setItem('quiz-theme', themeName)
   }

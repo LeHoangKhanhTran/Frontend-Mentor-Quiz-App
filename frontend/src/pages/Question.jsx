@@ -9,8 +9,8 @@ export default function Question({questionId, questionCount, setQuestionCount, l
     const [choice, setChoice] = useState(null);
     const score = useRef(0);
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [error, setError] = useState(false)
-    const {data} = useFetch({path: 'questions', param: questionId})
+    const [error, setError] = useState(false);
+    const {data} = useFetch({path: 'questions', param: questionId});
     useEffect(() => {
         if (data && choice === data.answer) {
             score.current = score.current + 1;
@@ -69,7 +69,10 @@ export default function Question({questionId, questionCount, setQuestionCount, l
                  <SecondSection>
                     {data.options.map((option, i) => {
                         return (
-                            <OptionItem index={i} choice={option} isChosen={!isSubmitted && choice === option} 
+                            <OptionItem 
+                            index={i} 
+                            choice={option} 
+                            isChosen={!isSubmitted && choice === option} 
                             isCorrect={!isSubmitted ? null : option === data.answer ? true : false} 
                             setChoice={setChoice}/>
                         )

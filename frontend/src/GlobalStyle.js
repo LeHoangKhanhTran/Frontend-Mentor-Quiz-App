@@ -27,15 +27,15 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         background: ${props => props.theme.theme.backgroundColor};
-        overflow-x: hidden;
-        overflow-y: auto;
+        /* overflow-x: hidden;
+        overflow-y: auto; */
     }
 
     #root {
         width: 100dvw;
         min-height: 100dvh;
         height: fit-content;  
-        overflow-y: auto;
+        /* overflow-y: auto; */
     }
 
     #root::before {
@@ -90,7 +90,7 @@ const GlobalStyle = createGlobalStyle`
 
     @media (max-width: 1050px) and (min-width: 500px) {
         :root {
-            font-size: 26px;
+            font-size: 25px;
         }
 
         #root::before {

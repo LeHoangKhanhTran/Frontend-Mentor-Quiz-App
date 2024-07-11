@@ -4,7 +4,8 @@ import { useParams } from "react-router-dom";
 import { useState, useMemo } from "react";
 import useFetch from "../hooks/useFetch";
 import Question from "./Question";
-import Spinner from "../Components/Spinner";
+import Spinner from "../Components/LoadingSpin";
+import LoadingSpin from "../Components/LoadingSpin";
 export default function Quiz() {
     const { topicName } = useParams();
     const [questionCount, setQuestionCount] = useState(1);
@@ -15,7 +16,7 @@ export default function Quiz() {
     return (
         <>
             <Header topic={topicName.toLowerCase()}/>
-            {loading && <Spinner/>}
+            {loading && <LoadingSpin message='Retrieving questions...'/>}
             {questionsIds[questionCount - 1] && !loading && <Content>
                 <Question questionId={questionsIds[questionCount - 1]} questionCount={questionCount} 
                 setQuestionCount={setQuestionCount} length={questionsIds.length} topicName={topicName} />

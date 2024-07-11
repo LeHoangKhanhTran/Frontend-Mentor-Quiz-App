@@ -1,6 +1,6 @@
 import Header from '../Components/Header'
 import Content from '../Components/Content';
-import Spinner from '../Components/Spinner';
+import LoadingSpin from '../Components/LoadingSpin';
 import { FirstSection, SecondSection } from '../Components/Content/Content.styles';
 import TopicItem from '../Components/TopicItem';
 import  useFetch  from '../hooks/useFetch';
@@ -17,15 +17,19 @@ function Home() {
                     </h1>
                     <div className="text" id="pick">Pick a subject to get started</div>
                 </FirstSection>
-                {loading && <Spinner/>}
-                {!loading && 
-                <SecondSection>
-                    {data && data.map((topic) => {
-                    return (
-                        <TopicItem value={topic.name}/>
-                    )
-                    })}
-                </SecondSection>}
+                { loading && 
+                    <SecondSection>
+                        <LoadingSpin message={"Loading topics..."}></LoadingSpin> 
+                    </SecondSection>
+                }
+                { !loading && 
+                    <SecondSection>
+                        {data && data.map((topic) => {
+                            return (
+                                <TopicItem value={topic.name}/>
+                            )
+                        })}
+                    </SecondSection> }  
             </Content>
         </>
     )
